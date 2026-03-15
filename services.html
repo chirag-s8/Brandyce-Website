@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore Brandyce's comprehensive digital solutions including video content creation, social media management, CRM strategy, and lead generation campaigns.">
+    <title>Services | Brandyce Digital Marketing & Visual Branding</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .page-header {
+            padding: 8rem 0 4rem;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(10, 10, 10, 1) 0%, rgba(15, 15, 15, 1) 100%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .service-row {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 6rem;
+        }
+
+        .service-row:nth-child(even) {
+            grid-template-columns: 1.5fr 1fr;
+        }
+
+        .service-row:nth-child(even) .service-icon {
+            order: 2;
+        }
+
+        .service-row:nth-child(even) .service-details {
+            order: 1;
+        }
+
+        .service-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            min-height: 250px;
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: var(--shadow-card);
+        }
+
+        .service-icon i {
+            font-size: 5rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        @media (max-width: 768px) {
+
+            .service-row,
+            .service-row:nth-child(even) {
+                grid-template-columns: 1fr;
+            }
+
+            .service-row:nth-child(even) .service-icon {
+                order: 1;
+            }
+
+            .service-row:nth-child(even) .service-details {
+                order: 2;
+            }
+
+            .service-icon {
+                min-height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <div class="bg-glow bg-glow-cyan" style="top: 20vh; right: -10vw;"></div>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Brandyce Logo" style="height: 110px; width: auto; border-radius: 4px;">
+            </a>
+
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-links">
+                <a href="about.html">About</a>
+                <a href="services.html" style="color: var(--text-primary);">Services</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1 class="fade-up visible">Comprehensive Solutions for <br><span class="gradient-text">Brand Growth</span>.
+            </h1>
+            <p class="fade-up visible delay-100" style="max-width: 600px; margin: 0 auto; font-size: 1.2rem;">From
+                high-quality content production to AI-integrated lead management, explore how we help businesses scale
+                faster.</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section>
+        <div class="container">
+
+            <!-- Service 1: Branding & Identity -->
+            <div class="service-row fade-up delay-100">
+                <div class="service-icon"
+                    style="background: url('https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=1000&auto=format&fit=crop') center/cover; position: relative; overflow: hidden; border: none;">
+                    <div
+                        style="position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; backdrop-filter: blur(2px);">
+                        <i class="fa-solid fa-layer-group"
+                            style="color: var(--accent-primary); filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.8)); -webkit-text-fill-color: initial;"></i>
+                    </div>
+                </div>
+                <div class="service-details">
+                    <h2 class="gradient-text" style="text-align: left; font-size: 2.5rem;">Branding & Identity</h2>
+                    <p class="text-lg">Your brand is more than a logo. It is the story, personality, and perception of
+                        your business.</p>
+                    <p>At Brandyce, we help businesses create a strong and memorable identity that reflects their values
+                        and connects with their audience. We craft brands that are clear, professional, and memorable.
+                    </p>
+                    <ul class="about-list" style="margin-top: 1.5rem;">
+                        <li><i class="fa-solid fa-check" style="color: var(--accent-primary);"></i> Brand development
+                            strategy
+                        </li>
+                        <li><i class="fa-solid fa-check" style="color: var(--accent-primary);"></i> Logo design & visual
+                            identity</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--accent-primary);"></i> Brand positioning &
+                            guidelines</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--accent-primary);"></i> Visual storytelling
+                            & messaging</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 2: Social Media Management -->
+            <div class="service-row fade-up delay-100">
+                <div class="service-icon"
+                    style="background: url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop') center/cover; position: relative; overflow: hidden; border: none;">
+                    <div
+                        style="position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; backdrop-filter: blur(2px);">
+                        <i class="fa-solid fa-hashtag"
+                            style="color: var(--accent-secondary); filter: drop-shadow(0 0 15px rgba(6, 182, 212, 0.8)); -webkit-text-fill-color: initial; background: none;"></i>
+                    </div>
+                </div>
+                <div class="service-details">
+                    <h2 style="text-align: left; font-size: 2.5rem;">Social Media Management</h2>
+                    <p class="text-lg">Social media is one of the most powerful tools for brand visibility and customer
+                        engagement.</p>
+                    <p>Brandyce helps businesses build a strong social presence through strategic content planning and
+                        consistent management. Our goal is to turn your social media into a powerful brand-building and
+                        customer acquisition channel.</p>
+                    <ul class="about-list" style="margin-top: 1.5rem;">
+                        <li><i class="fa-solid fa-check" style="color: var(--accent-secondary);"></i> Content calendar &
+                            post design</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--accent-secondary);"></i> Caption writing &
+                            hashtags</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--accent-secondary);"></i> Community
+                            management</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--accent-secondary);"></i> Profile
+                            optimization & tracking</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 3: Digital Marketing -->
+            <div class="service-row fade-up delay-100">
+                <div class="service-icon"
+                    style="background: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop') center/cover; position: relative; overflow: hidden; border: none;">
+                    <div
+                        style="position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; backdrop-filter: blur(2px);">
+                        <i class="fa-solid fa-bullseye"
+                            style="color: var(--whatsapp-color); filter: drop-shadow(0 0 15px rgba(37, 211, 102, 0.8)); -webkit-text-fill-color: initial; background: none;"></i>
+                    </div>
+                </div>
+                <div class="service-details">
+                    <h2 style="text-align: left; font-size: 2.5rem;">Digital Marketing</h2>
+                    <p class="text-lg">Our digital marketing strategies are designed to help businesses reach the right
+                        audience and drive real results.</p>
+                    <p>We focus on performance-driven marketing that brings visibility, traffic, and conversions. We
+                        ensure that every marketing effort contributes to business growth and measurable results.</p>
+                    <ul class="about-list" style="margin-top: 1.5rem;">
+                        <li><i class="fa-solid fa-check" style="color: var(--whatsapp-color);"></i> Paid advertising &
+                            lead gen campaigns</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--whatsapp-color);"></i> Performance
+                            marketing execution</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--whatsapp-color);"></i> Conversion
+                            optimization</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--whatsapp-color);"></i> Campaign strategy &
+                            analytics</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Service 4: Video Production -->
+            <div class="service-row fade-up delay-100">
+                <div class="service-icon"
+                    style="background: url('https://images.unsplash.com/photo-1601506521937-0121a7fc2a6b?q=80&w=800&auto=format&fit=crop') center/cover; position: relative; overflow: hidden; border: none;">
+                    <div
+                        style="position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; backdrop-filter: blur(2px);">
+                        <i class="fa-solid fa-video"
+                            style="color: #E1306C; filter: drop-shadow(0 0 15px rgba(225, 48, 108, 0.8)); -webkit-text-fill-color: initial; background: none;"></i>
+                    </div>
+                </div>
+                <div class="service-details">
+                    <h2 style="text-align: left; font-size: 2.5rem;">Video Production & Content</h2>
+                    <p class="text-lg">In today’s digital world, video content drives engagement and attention like
+                        nothing else.</p>
+                    <p>Brandyce specializes in creating high-quality video content that captures attention and
+                        communicates brand value effectively. Our content helps brands stand out in crowded digital
+                        platforms.</p>
+                    <ul class="about-list" style="margin-top: 1.5rem;">
+                        <li><i class="fa-solid fa-check" style="color: #E1306C;"></i> Brand promotional & story videos
+                        </li>
+                        <li><i class="fa-solid fa-check" style="color: #E1306C;"></i> Social media reels & shorts</li>
+                        <li><i class="fa-solid fa-check" style="color: #E1306C;"></i> Product showcase videos</li>
+                        <li><i class="fa-solid fa-check" style="color: #E1306C;"></i> Professional editing &
+                            post-production</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- AI-INTEGRATED CRM SOLUTION -->
+            <div class="glass-card fade-up delay-200"
+                style="margin-top: 6rem; padding: 4rem; position: relative; overflow: hidden; border-color: rgba(6, 182, 212, 0.3);">
+                <div class="bg-glow bg-glow-cyan"
+                    style="left: -10vw; bottom: -10vw; width: 40vw; height: 40vw; opacity: 0.15; z-index: 0;"></div>
+                <div style="position: relative; z-index: 1;">
+                    <div
+                        style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: rgba(6, 182, 212, 0.1); border: 1px solid var(--accent-secondary); border-radius: 20px; color: var(--accent-secondary); font-size: 0.9rem; font-weight: 600; margin-bottom: 1.5rem;">
+                        <i class="fa-solid fa-robot"></i> AI-INTEGRATED CRM SOLUTION
+                    </div>
+                    <h2 class="gradient-text" style="text-align: left; font-size: 3rem; margin-bottom: 2rem;">Smart Lead
+                        Management <br>for Modern Businesses</h2>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+                        <div>
+                            <p class="text-lg">Brandyce goes beyond marketing by offering AI-integrated CRM systems that
+                                help businesses manage leads more efficiently and convert them into customers.</p>
+                            <p>By combining marketing with intelligent CRM systems, we ensure that businesses not only
+                                attract customers but also build long-term relationships with them. This
+                                technology-driven approach allows brands to operate smarter, faster, and more
+                                efficiently.</p>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.2rem; margin-bottom: 1rem;">Our CRM system helps businesses:</h4>
+                            <ul class="about-list" style="margin-top: 0;">
+                                <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-check"
+                                        style="color: var(--accent-secondary);"></i> Capture leads automatically</li>
+                                <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-check"
+                                        style="color: var(--accent-secondary);"></i> Track customer interactions</li>
+                                <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-check"
+                                        style="color: var(--accent-secondary);"></i> Organize sales pipelines</li>
+                                <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-check"
+                                        style="color: var(--accent-secondary);"></i> Automate follow-ups</li>
+                                <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-check"
+                                        style="color: var(--accent-secondary);"></i> Analyze customer behavior</li>
+                                <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-check"
+                                        style="color: var(--accent-secondary);"></i> Improve conversion rates</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 6rem;">
+                <h3 style="margin-bottom: 2rem;">Ready to upgrade your brand and operations?</h3>
+                <a href="pricing.html" class="btn btn-primary btn-lg"
+                    style="font-size: 1.2rem; padding: 1.2rem 3rem;">View Our Pricing Tiers <i
+                        class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- (Footer identical to about.html) -->
+    <footer class="footer">
+        <div class="container">
+            <h2 class="fade-up" style="text-align: left;">Let's build something <span
+                    class="gradient-text">amazing</span> together.</h2>
+
+            <div class="footer-grid">
+                <div class="contact-info fade-up delay-100">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:brandyce.team@gmail.com">brandyce.team@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+917019701791">7019701791</a> / <a href="tel:+916361408190">6361408190</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-at"></i>
+                        <a href="https://instagram.com/brandyce.co" target="_blank">@brandyce.co</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Bangalore, India</span>
+                    </div>
+                </div>
+
+                <div class="footer-cta fade-up delay-200">
+                    <p class="text-lg" style="margin-bottom: 2rem;">Ready to take the next step? Reach out directly via
+                        Instagram or WhatsApp.</p>
+                    <div class="flex gap-sm">
+                        <a href="https://wa.me/917019701791" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Chat
+                        </a>
+                        <a href="https://instagram.com/brandyce.co" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-instagram">
+                            <i class="fa-brands fa-instagram"></i> DM
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Brandyce. All Rights Reserved. | <a href="index.html">Home</a> | <a
+                        href="about.html">About</a> | <a href="services.html">Services</a> | <a
+                        href="pricing.html">Pricing</a> | <a href="contact.html">Contact</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
