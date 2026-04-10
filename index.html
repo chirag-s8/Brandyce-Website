@@ -15,11 +15,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body
+    style="background-image: linear-gradient(to bottom, rgba(7,7,9,0.8), rgba(7,7,9,0.95)), url('https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'); background-size: cover; background-position: center; background-attachment: fixed;">
 
-    <!-- Custom Cursor -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
+    <!-- Note: Custom cursor removed as per user request -->
 
     <!-- Decorative Background Elements -->
     <div class="bg-glow bg-glow-purple"></div>
@@ -46,11 +45,10 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home"
-        style="background-image: linear-gradient(to bottom, rgba(7,7,9,0.8), rgba(7,7,9,0.95)), url('https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; border-bottom: 1px solid var(--glass-border);">
+    <section class="hero" id="home" style="border-bottom: 1px solid var(--glass-border);">
         <div class="container">
             <div class="hero-content fade-up visible">
-                <h1 style="font-size: clamp(3rem, 7vw, 4.5rem);">Creating Brands<br><span class="gradient-text">People
+                <h1 style="font-size: clamp(2.2rem, 5vw, 3.8rem);">Creating Brands<br><span class="gradient-text">People
                         Love.</span></h1>
                 <p>We are a Bangalore-based branding and digital marketing company helping businesses build powerful
                     brand identities, create impactful content, and drive measurable growth through smart marketing
@@ -76,13 +74,14 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-content fade-up delay-100">
-                    <h2 class="gradient-text" style="text-align: left; font-size: 2.5rem; line-height: 1.1;">Creating brands people love</h2>
+
                     <p class="text-lg">Brandyce is a modern branding and digital marketing company built with one
                         mission — <strong>to help businesses create brands people trust, remember, and love.</strong>
                     </p>
                     <p>In today's digital world, simply having a business is not enough. Brands must stand out,
                         communicate clearly, and connect emotionally. At Brandyce, we combine creative branding,
-                        high-quality content production, strategic marketing, and advanced AI technology to build brands
+                        high-quality content production, strategic marketing, and advanced AI technology to build
+                        brands
                         that last.</p>
 
                     <a href="about.html" class="btn btn-outline" style="margin-top: 1.5rem;">
@@ -112,43 +111,69 @@
             <p class="text-center fade-up delay-100" style="margin-bottom: 3rem;">Our complete suite of brand-building
                 and growth solutions.</p>
 
-            <div class="services-grid"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                <!-- Service 1 -->
-                <div class="glass-card pricing-card fade-up delay-100" style="text-align: left; padding: 2.5rem;">
-                    <i class="fa-solid fa-layer-group icon"
-                        style="width: 3rem; height: 3rem; color: var(--accent-primary); margin-bottom: 1.5rem;"></i>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Branding & Identity</h3>
-                    <p style="margin-bottom: auto;">We help businesses create a strong and memorable identity that
-                        reflects their values and connects with their audience.</p>
+            <div class="services-carousel-wrapper fade-up delay-100">
+                <button class="carousel-arrow prev-arrow" aria-label="Previous service"><i
+                        class="fa-solid fa-arrow-left"></i></button>
+
+                <div class="services-carousel">
+                    <!-- Service 1 -->
+                    <div class="glass-card service-card">
+                        <i class="fa-solid fa-layer-group icon"
+                            style="width: 3rem; height: 3rem; color: var(--accent-primary); margin-bottom: 1.5rem;"></i>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Branding & Identity</h3>
+                        <p style="margin-bottom: auto;">We help businesses create a strong and memorable identity that
+                            reflects their values and connects with their audience.</p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="glass-card service-card">
+                        <i class="fa-solid fa-hashtag icon"
+                            style="width: 3rem; height: 3rem; color: var(--accent-secondary); margin-bottom: 1.5rem;"></i>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Social Media Management</h3>
+                        <p style="margin-bottom: auto;">Build a strong social presence through strategic content
+                            planning,
+                            aesthetic curation, and consistent community management.</p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="glass-card service-card">
+                        <i class="fa-solid fa-bullseye icon"
+                            style="width: 3rem; height: 3rem; color: var(--whatsapp-color); margin-bottom: 1.5rem;"></i>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Digital Marketing</h3>
+                        <p style="margin-bottom: auto;">Performance-driven marketing that brings visibility, traffic,
+                            and
+                            conversions through paid advertising and optimization.</p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="glass-card service-card">
+                        <i class="fa-solid fa-video icon"
+                            style="width: 3rem; height: 3rem; color: #E1306C; margin-bottom: 1.5rem;"></i>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Video Production</h3>
+                        <p style="margin-bottom: auto;">High-quality video content that captures attention, from brand
+                            promos to social media reels and storytelling videos.</p>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="glass-card service-card">
+                        <i class="fa-solid fa-laptop-code icon"
+                            style="width: 3rem; height: 3rem; color: #3498db; margin-bottom: 1.5rem;"></i>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Web Development</h3>
+                        <p style="margin-bottom: auto;">Creating fast, scalable, and beautifully designed websites that
+                            serve as the digital home for your brand.</p>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="glass-card service-card">
+                        <i class="fa-solid fa-robot icon"
+                            style="width: 3rem; height: 3rem; color: #06b6d4; margin-bottom: 1.5rem;"></i>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">AI-Integrated CRM</h3>
+                        <p style="margin-bottom: auto;">Smart lead management systems that automate follow-ups, organize pipelines, and help convert more leads into loyal customers.</p>
+                    </div>
                 </div>
 
-                <!-- Service 2 -->
-                <div class="glass-card pricing-card fade-up delay-100" style="text-align: left; padding: 2.5rem;">
-                    <i class="fa-solid fa-hashtag icon"
-                        style="width: 3rem; height: 3rem; color: var(--accent-secondary); margin-bottom: 1.5rem;"></i>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Social Media Management</h3>
-                    <p style="margin-bottom: auto;">Build a strong social presence through strategic content planning,
-                        aesthetic curation, and consistent community management.</p>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="glass-card pricing-card fade-up delay-200" style="text-align: left; padding: 2.5rem;">
-                    <i class="fa-solid fa-bullseye icon"
-                        style="width: 3rem; height: 3rem; color: var(--whatsapp-color); margin-bottom: 1.5rem;"></i>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Digital Marketing</h3>
-                    <p style="margin-bottom: auto;">Performance-driven marketing that brings visibility, traffic, and
-                        conversions through paid advertising and optimization.</p>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="glass-card pricing-card fade-up delay-200" style="text-align: left; padding: 2.5rem;">
-                    <i class="fa-solid fa-video icon"
-                        style="width: 3rem; height: 3rem; color: #E1306C; margin-bottom: 1.5rem;"></i>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Video Production</h3>
-                    <p style="margin-bottom: auto;">High-quality video content that captures attention, from brand
-                        promos to social media reels and storytelling videos.</p>
-                </div>
+                <button class="carousel-arrow next-arrow" aria-label="Next service"><i
+                        class="fa-solid fa-arrow-right"></i></button>
             </div>
 
             <div class="text-center" style="margin-top: 4rem;">

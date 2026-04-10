@@ -91,42 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Custom Cursor Logic
-    const cursorDot = document.querySelector('.cursor-dot');
-    const cursorOutline = document.querySelector('.cursor-outline');
-    
-    // Only run if cursors exist and we are on desktop
-    if (cursorDot && cursorOutline && window.matchMedia("(min-width: 768px)").matches) {
-        
-        // Track mouse movement
-        window.addEventListener('mousemove', (e) => {
-            const posX = e.clientX;
-            const posY = e.clientY;
-
-            // Instantly move dot
-            cursorDot.style.left = `${posX}px`;
-            cursorDot.style.top = `${posY}px`;
-
-            // Add slight easing to the outline
-            cursorOutline.animate({
-                left: `${posX}px`,
-                top: `${posY}px`
-            }, { duration: 500, fill: "forwards" });
-        });
-
-        // Hover effect for links and buttons
-        const hoverElements = document.querySelectorAll('a, button, .glass-card');
-        
-        hoverElements.forEach(element => {
-            element.addEventListener('mouseenter', () => {
-                document.body.classList.add('cursor-hover');
-            });
-            
-            element.addEventListener('mouseleave', () => {
-                document.body.classList.remove('cursor-hover');
-            });
-        });
-    }
+    // Custom Cursor logic removed as per user request.
 
     // 3D Tilt Effect on Glass Cards
     const cards = document.querySelectorAll('.glass-card');
@@ -181,6 +146,30 @@ document.addEventListener('DOMContentLoaded', () => {
             const scrollPos = window.scrollY;
             // Move background slightly down as you scroll
             heroSection.style.backgroundPosition = `center ${scrollPos * 0.4}px`;
+        });
+    }
+
+    // Services Carousel Navigation
+    const carousel = document.querySelector('.services-carousel');
+    const prevBtn = document.querySelector('.prev-arrow');
+    const nextBtn = document.querySelector('.next-arrow');
+
+    if (carousel && prevBtn && nextBtn) {
+        // Find compute card width plus gap
+        const firstCard = carousel.querySelector('.service-card');
+        
+        prevBtn.addEventListener('click', () => {
+            if (firstCard) {
+                const scrollAmount = firstCard.offsetWidth + 32; // 32px is 2rem gap
+                carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            }
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            if (firstCard) {
+                const scrollAmount = firstCard.offsetWidth + 32;
+                carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
         });
     }
 });

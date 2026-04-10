@@ -9,8 +9,8 @@
    ========================================================================== */
 :root {
   /* Colors - Modern Dark Theme */
-  --bg-dark: #1A1918; /* Rich charcoal matching the warm grey */
-  --bg-darker: #131211;
+  --bg-dark: transparent; /* Changed to transparent so body background images show */
+  --bg-darker: rgba(19, 18, 17, 0.6); /* Semi-transparent alternative to #131211 */
   --bg-card: rgba(26, 25, 24, 0.4);
   --bg-card-hover: rgba(36, 35, 33, 0.6);
   --glass-border: rgba(255, 255, 255, 0.08);
@@ -79,23 +79,16 @@ html {
 body {
   font-family: var(--font-body);
   background-color: var(--bg-dark);
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 50px 50px;
-  background-position: center center;
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Hide default cursor on desktop where custom cursor is used */
-  cursor: none;
 }
 
 /* Fallback for when elements might reset cursor */
 a, button, input, textarea, select {
-  cursor: none;
+  cursor: pointer;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -170,45 +163,7 @@ ul {
    Custom Cursor
    ========================================================================== */
 
-.cursor-dot {
-  width: var(--cursor-size);
-  height: var(--cursor-size);
-  background-color: #B51A3A;
-  border-radius: 50%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9999;
-  transition: opacity 0.3s ease-in-out, transform 0.1s ease-out;
-  box-shadow: 0 0 10px #B51A3A;
-}
-
-.cursor-outline {
-  width: var(--cursor-outline-size);
-  height: var(--cursor-outline-size);
-  border: 2px solid rgba(181, 26, 58, 0.5);
-  border-radius: 50%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9998;
-  transition: width 0.2s ease-out, height 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out;
-}
-
-.cursor-hover .cursor-dot {
-  transform: translate(-50%, -50%) scale(0.5);
-}
-
-.cursor-hover .cursor-outline {
-  width: 50px;
-  height: 50px;
-  background-color: rgba(181, 26, 58, 0.1);
-  border-color: rgba(181, 26, 58, 0.8);
-}
+/* Custom cursor styling has been removed to use native browser cursors. */
 
 @media (max-width: 768px) {
   .cursor-dot, .cursor-outline {
@@ -378,6 +333,77 @@ section:nth-child(even) {
   border-color: var(--glass-border-hover);
   /* Hover transforms removed to let JS handle 3D tilt seamlessly, but keep shadow glow */
   box-shadow: 0 20px 40px rgba(160, 157, 155, 0.15);
+}
+
+/* Services Carousel - Scroll Snap */
+.services-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.services-carousel {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  flex: 1;
+  scroll-behavior: smooth;
+  align-items: stretch; /* Forces equal height for all card buttons */
+}
+
+.services-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.service-card {
+  width: 350px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 2.5rem;
+  scroll-snap-align: start;
+}
+
+.carousel-arrow {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.carousel-arrow:hover {
+  background: var(--accent-gradient);
+  transform: scale(1.1);
+  border-color: transparent;
+  color: #fff;
+}
+
+.prev-arrow {
+  margin-right: -22px;
+}
+
+.next-arrow {
+  margin-left: -22px;
+}
+
+@media (max-width: 768px) {
+  .carousel-arrow {
+    display: none;
+  }
 }
 
 /* Background Effects */
