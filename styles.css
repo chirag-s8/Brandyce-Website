@@ -839,7 +839,16 @@ header.scrolled {
   }
   
   .logo img {
-    height: 60px !important; /* Prevents giant header from blocking content */
+    height: 50px !important; /* Prevents giant header from blocking content */
+  }
+
+  /* Prevent the black header from covering the top sections on mobile */
+  .page-header {
+    padding-top: 11rem !important;
+  }
+  
+  .hero {
+    padding-top: 9rem !important;
   }
 
   .about-grid, .crm-grid {
