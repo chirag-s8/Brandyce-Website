@@ -832,13 +832,19 @@ header.scrolled {
     justify-content: center;
   }
 
-  /* Solid black navbar on mobile for visibility */
+  /* Solid black navbar on mobile and resize logo */
   header {
     background-color: #050505 !important;
+    padding: 0.5rem 0 !important;
+  }
+  
+  .logo img {
+    height: 60px !important; /* Prevents giant header from blocking content */
   }
 
-  .about-grid {
-    grid-template-columns: 1fr;
+  .about-grid, .crm-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
   }
   
   .quote-box {
