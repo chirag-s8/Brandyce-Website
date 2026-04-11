@@ -814,6 +814,29 @@ header.scrolled {
 }
 
 @media (max-width: 768px) {
+  /* Center align everything on mobile */
+  body, .about-content, .about-content h2, .about-content h3, .service-details h2 {
+    text-align: center !important;
+  }
+
+  .service-card {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .about-list li, .pricing-features li, .contact-item {
+    justify-content: center !important;
+  }
+  
+  .flex.gap-sm {
+    justify-content: center;
+  }
+
+  /* Solid black navbar on mobile for visibility */
+  header {
+    background-color: #050505 !important;
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
   }
@@ -843,7 +866,7 @@ header.scrolled {
     top: 100%;
     left: 0;
     width: 100%;
-    background: var(--bg-darker);
+    background: #050505 !important;
     flex-direction: column;
     padding: 2rem;
     text-align: center;
@@ -856,5 +879,9 @@ header.scrolled {
   
   .mobile-menu-btn {
     display: block;
+  }
+  
+  .carousel-arrow {
+    display: none;
   }
 }
